@@ -9,7 +9,7 @@ env:
   LOCATION: westeurope
   TEMPLATE-FILE: infra/webapp.bicep
   SUBSCRIPTION-ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
-  WEBAPP-NAME: eshoponweb-webapp-az400
+  WEBAPP-NAME: eshoponweb-webapp-az400rexf
 
   #These environment variables are used by the terraform azure provider to setup OIDD authenticate. 
   ARM_SUBSCRIPTION_ID: ${{ secrets.ARM_SUBSCRIPTION_ID }}
@@ -89,8 +89,8 @@ jobs:
 
     - name: 'Run az commands'
       run: |
-        az account show
-        az group list
+        #az account show
+        #az group list
           
     # Deploy Azure WebApp using Bicep file
     - name: deploy
